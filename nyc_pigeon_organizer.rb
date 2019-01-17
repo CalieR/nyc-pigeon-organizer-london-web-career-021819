@@ -7,7 +7,7 @@ def nyc_pigeon_organizer(data)
     details.each do |option, names_array| # option: purple/subway/female
       names_array.each do |name| # get down to name of pigeon level
         if pigeons.has_key?(name) # is the pigeon name in the new hash?
-          if pigeons[name].has_key?(attribute) # yes, does the pigeon have these properties?
+          if pigeons[name].has_key?(attribute) # yes, does the pigeon have the attribute key?
             pigeons[name][attribute] << option.to_s # yes, push any remaining options into array
           else
             pigeons[name][attribute] = [option.to_s] # no, add them as value of attribute, in an array
