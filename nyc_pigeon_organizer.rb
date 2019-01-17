@@ -10,7 +10,7 @@ def nyc_pigeon_organizer(data)
           if pigeons[name].has_key?(attribute) # yes, does the pigeon have the attribute key?
             pigeons[name][attribute] << option.to_s # yes, push any remaining options into array
           else
-            pigeons[name][attribute] = [option.to_s] # no, add them as value of attribute, in an array
+            pigeons[name][attribute] = [option.to_s] # no, add the attribute keys, store the details in an array
           end
         else  pigeons[name]= {attribute => [option.to_s]} # no, pigeon not in hash so add it with a hash containing properties
         end
